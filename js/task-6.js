@@ -11,7 +11,6 @@ function createBoxes(amount) {
   for (let i = 0; i < amount; i++) {
     const calculation = 30 + i * 10;
     const boxnew = document.createElement("div");
-
     boxnew.style.backgroundColor = getRandomHexColor();
     boxnew.style.height = `${calculation}`;
     boxnew.style.width = `${calculation}`;
