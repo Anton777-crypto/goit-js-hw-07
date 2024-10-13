@@ -12,8 +12,8 @@ function createBoxes(amount) {
     const calculation = 30 + i * 10;
     const boxnew = document.createElement("div");
     boxnew.style.backgroundColor = getRandomHexColor();
-    boxnew.style.height = `${calculation}`;
-    boxnew.style.width = `${calculation}`;
+    boxnew.style.height = `${calculation}px`;
+    boxnew.style.width = `${calculation}px`;
     box.push(boxnew);
   }
   creatbox.append(...box);
@@ -25,8 +25,8 @@ function destroyBoxes() {
 }
 
 const controls = document.querySelector("#controls  input");
-const data_create = document.querySelector("[data - create]");
-const data_destroy = document.querySelector("[data - destroy]");
+const data_create = document.querySelector("[data-create]");
+const data_destroy = document.querySelector("[data-destroy]");
 
 data_create.addEventListener("click", () => {
   const newcreat = Number(controls.value);
@@ -36,8 +36,8 @@ data_create.addEventListener("click", () => {
     return;
   }
 
-  createBoxes(amount);
+  createBoxes(newcreat);
   controls.value = "";
 });
 
-data_destroy.addEventListener(destroyBoxes);
+data_destroy.addEventListener("click", destroyBoxes);
