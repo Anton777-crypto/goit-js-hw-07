@@ -36,7 +36,7 @@ data_create.addEventListener("click", () => {
     return;
   }
 
-  createBoxes(newcreat);
+  createBoxes(newcreat);.
   controls.value = "";
 });
 
